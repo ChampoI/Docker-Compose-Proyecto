@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:12-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./database/database.env
+    ports:
+      - "5432:5432"
+
+  api-fastapi:
+    build: ./api
+    ports:
+      - "5002:80"
+    links:
+      - db
+    depends_on: 
+      - db
+  api-faker:
+    build: ./faker
+    ports:
+      - "5005:80"
+  
+  web:
+    build: ./web
+    ports:
+      - "5000:80"
+    
+volumes:
+  postgres_data:

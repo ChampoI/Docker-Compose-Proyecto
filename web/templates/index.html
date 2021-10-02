@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TABLA</h1>
+    <form action="/" method="POST">
+        <button type="submit"> Crear datos  </button>
+    </form>
+    <table>
+        <thead>
+            <th>first_name</th>
+            <th>day_of_month</th>
+            <th>day_of_week</th>
+            <th>country</th>
+            <th>word</th>
+        </thead>
+        <tbody>
+
+            {% for i in datos %}
+                <tr>
+                    <td>{{i.first_name}}</td>
+                    <td>{{i.day_of_month}}</td>
+                    <td>{{i.day_of_week}}</td>
+                    <td>{{i.country}}</td>
+                    <td>{{i.word}}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+</body>
+</html>
