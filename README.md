@@ -17,4 +17,5 @@ Si se cambia el DDL de la tabla de la base de datos se debe de eliminar la tabla
 
  - docker rm $(docker ps -a -q)
 
-# ft. Nicolas Hurtado
+
+
