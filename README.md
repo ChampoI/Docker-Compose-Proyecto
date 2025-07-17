@@ -159,11 +159,4 @@ curl http://localhost:5002/eliminar_registros
 docker-compose down -v
 ```
 
----
-
-## 📄 Licencia
-
-MIT © TuNombre
-
-
 
